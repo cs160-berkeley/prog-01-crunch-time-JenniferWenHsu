@@ -29,10 +29,10 @@
         android:layout_height="wrap_content"
         android:text="Reset"
         android:id="@+id/resetButton"
+        android:onClick="onButtonClick2"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/calorieText"
-        android:layout_toStartOf="@+id/calorieText"
-        android:onClick="onButtonClick2" />
+        android:layout_alignRight="@+id/calorieEditText"
+        android:layout_alignEnd="@+id/calorieEditText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,9 +40,11 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/calorieEditText"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/calculateButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp" />
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -50,9 +52,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Calories"
         android:id="@+id/calorieText"
-        android:layout_alignBottom="@+id/calorieEditText"
-        android:layout_toRightOf="@+id/calorieEditText"
-        android:layout_toEndOf="@+id/calorieEditText" />
+        android:layout_below="@+id/calorieEditText"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="160dp"
@@ -95,44 +96,56 @@
         android:layout_toEndOf="@+id/imageView2" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText"
+        android:hint="reps"
         android:layout_alignBottom="@+id/imageView2"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_toStartOf="@+id/imageView" />
+        android:layout_alignLeft="@+id/calorieEditText"
+        android:layout_alignStart="@+id/calorieEditText"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText2"
-        android:layout_alignTop="@+id/editText"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText" />
+        android:hint="reps"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignRight="@+id/calorieEditText"
+        android:layout_alignEnd="@+id/calorieEditText"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText3"
+        android:hint="mins"
         android:layout_alignBottom="@+id/imageView3"
-        android:layout_toLeftOf="@+id/imageView4"
-        android:layout_toStartOf="@+id/imageView4" />
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText4"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_toRightOf="@+id/editText3"
-        android:layout_toEndOf="@+id/editText3" />
+        android:hint="mins"
+        android:layout_alignTop="@+id/editText3"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"/>
 
 
 </RelativeLayout>
