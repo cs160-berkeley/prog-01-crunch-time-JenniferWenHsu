@@ -39,14 +39,35 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        //only pushup input
+        if (!pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+            pushupNum=Double.parseDouble(pushupString);
+            calorieText.setText(Double.toString(pushupNum));
 
-        pushupNum = Double.parseDouble(pushupString);
-        situpNum = Double.parseDouble(situpString);
-        jumpingjackMin = Double.parseDouble(jumpingjackString);
-        joggingMin = Double.parseDouble(joggingString);
+            //need to write to forbid users to write to the other textfields
+        }
 
-        double total = pushupNum + situpNum + jumpingjackMin + joggingMin;
-        calorieText.setText(Double.toString(total));
+        //only situp input
+        if (pushupString.matches("")&&!situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+            situpNum=Double.parseDouble(situpString);
+            calorieText.setText(Double.toString(situpNum));
+
+            //need to write to forbid users to write to the other textfields
+        }
+        //only jumpingjack input
+        if (pushupString.matches("")&&situpString.matches("")&&!jumpingjackString.matches("")&&joggingString.matches("")){
+            jumpingjackMin=Double.parseDouble(jumpingjackString);
+            calorieText.setText(Double.toString(jumpingjackMin));
+
+            //need to write to forbid users to write to the other textfields
+        }
+        //only jogging input
+        if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&!joggingString.matches("")){
+            joggingMin=Double.parseDouble(joggingString);
+            calorieText.setText(Double.toString(joggingMin));
+
+            //need to write to forbid users to write to the other textfields
+        }
 
 
     }
