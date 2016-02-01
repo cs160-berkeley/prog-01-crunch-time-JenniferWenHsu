@@ -21,26 +21,30 @@ public class MainActivity extends AppCompatActivity {
         EditText jumpingjackText = (EditText)findViewById(R.id.editText3);
         EditText joggingText = (EditText)findViewById(R.id.editText4);
 
-        TextView calorieText = (TextView)findViewById(R.id.calorieEditText);
+        EditText calorieText = (EditText)findViewById(R.id.calorieEditText);
 
         double pushupNum = 0;
         double situpNum = 0;
         double jumpingjackMin = 0;
         double joggingMin = 0;
+        double totalCalorie = 0;
 
         String pushupString = pushupText.getText().toString();
         String situpString = situpText.getText().toString();
         String jumpingjackString = jumpingjackText.getText().toString();
         String joggingString = joggingText.getText().toString();
+        String calorieString = calorieText.getText().toString();
 
         //if the user didn't place any inputs
-        if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+        if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
+                &&calorieString.matches("")){
             Toast.makeText(this, "Please enter at least one field to calculate", Toast.LENGTH_SHORT).show();
             return;
         }
 
         //only pushup input
-        if (!pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+        if (!pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
+                &&calorieString.matches("")){
             pushupNum=Double.parseDouble(pushupString);
             calorieText.setText(Double.toString(pushupNum*100/350));
             situpText.setText(Double.toString(pushupNum*200/350));
@@ -49,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //only situp input
-        else if (pushupString.matches("")&&!situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+        else if (pushupString.matches("")&&!situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
+                &&calorieString.matches("")){
             situpNum=Double.parseDouble(situpString);
             calorieText.setText(Double.toString(situpNum*100/200));
             pushupText.setText(Double.toString(situpNum*350/200));
@@ -57,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
             joggingText.setText(Double.toString(situpNum*12/200));
         }
         //only jumpingjack input
-        else if (pushupString.matches("")&&situpString.matches("")&&!jumpingjackString.matches("")&&joggingString.matches("")){
+        else if (pushupString.matches("")&&situpString.matches("")&&!jumpingjackString.matches("")&&joggingString.matches("")
+                &&calorieString.matches("")){
             jumpingjackMin=Double.parseDouble(jumpingjackString);
             calorieText.setText(Double.toString(jumpingjackMin*10));
             pushupText.setText(Double.toString(jumpingjackMin*35));
@@ -66,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
         //only jogging input
-        else if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&!joggingString.matches("")){
+        else if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&!joggingString.matches("")
+                &&calorieString.matches("")){
             joggingMin=Double.parseDouble(joggingString);
             calorieText.setText(Double.toString(joggingMin*100/12));
             pushupText.setText(Double.toString(joggingMin*350/12));
@@ -74,6 +81,16 @@ public class MainActivity extends AppCompatActivity {
             jumpingjackText.setText(Double.toString(joggingMin*10/12));
 
         }
+        //only the calorie input
+        else if(pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
+                &&!calorieString.matches("")){
+            totalCalorie = Double.parseDouble(calorieString);
+            pushupText.setText(Double.toString(totalCalorie*3.5));
+            situpText.setText(Double.toString(totalCalorie*2));
+            jumpingjackText.setText(Double.toString(totalCalorie/10));
+            joggingText.setText(Double.toString(totalCalorie*0.12));
+        }
+
         else{
             Toast.makeText(this, "Only fill in one field", Toast.LENGTH_SHORT).show();
             return;
