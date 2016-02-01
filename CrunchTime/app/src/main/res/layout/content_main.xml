@@ -10,10 +10,128 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.jenni_000.crunchtime.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:background="#dea3a3a3"
+    android:id="@+id/ap">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/calculateButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/calorieEditText"
+        android:layout_alignStart="@+id/calorieEditText"
+        android:onClick="onButtonClick1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButton"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/calorieText"
+        android:layout_toStartOf="@+id/calorieText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/calorieEditText"
+        android:layout_below="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Calories"
+        android:id="@+id/calorieText"
+        android:layout_alignBottom="@+id/calorieEditText"
+        android:layout_toRightOf="@+id/calorieEditText"
+        android:layout_toEndOf="@+id/calorieEditText" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/pushup"
+        android:padding="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/calculateButton"
+        android:layout_alignEnd="@+id/calculateButton" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/jumpingjack"
+        android:padding="5dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/jogging"
+        android:padding="5dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView3" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/situp"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignTop="@+id/editText"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:layout_alignBottom="@+id/editText3"
+        android:layout_toRightOf="@+id/editText3"
+        android:layout_toEndOf="@+id/editText3" />
+
+
 </RelativeLayout>

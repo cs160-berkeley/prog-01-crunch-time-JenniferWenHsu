@@ -8,8 +8,48 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public void onButtonClick1(View view){
+
+        EditText pushupText = (EditText)findViewById(R.id.editText);
+        EditText situpText = (EditText)findViewById(R.id.editText2);
+        EditText jumpingjackText = (EditText)findViewById(R.id.editText3);
+        EditText joggingText = (EditText)findViewById(R.id.editText4);
+
+        TextView calorieText = (TextView)findViewById(R.id.calorieEditText);
+
+        double pushupNum = 0;
+        double situpNum = 0;
+        double jumpingjackMin = 0;
+        double joggingMin = 0;
+
+        String pushupString = pushupText.getText().toString();
+        String situpString = situpText.getText().toString();
+        String jumpingjackString = jumpingjackText.getText().toString();
+        String joggingString = joggingText.getText().toString();
+
+        //if the user didn't place any inputs
+        if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
+            Toast.makeText(this, "Please enter at least one field to calculate", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+        pushupNum = Double.parseDouble(pushupString);
+        situpNum = Double.parseDouble(situpString);
+        jumpingjackMin = Double.parseDouble(jumpingjackString);
+        joggingMin = Double.parseDouble(joggingString);
+
+        double total = pushupNum + situpNum + jumpingjackMin + joggingMin;
+        calorieText.setText(Double.toString(total));
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
