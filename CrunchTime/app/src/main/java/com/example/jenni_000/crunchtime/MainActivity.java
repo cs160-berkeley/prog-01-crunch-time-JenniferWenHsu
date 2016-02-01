@@ -42,24 +42,36 @@ public class MainActivity extends AppCompatActivity {
         //only pushup input
         if (!pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
             pushupNum=Double.parseDouble(pushupString);
-            calorieText.setText(Double.toString(pushupNum));
+            calorieText.setText(Double.toString(pushupNum*2/7));
+            situpText.setText(Double.toString(pushupNum*4/7));
+            jumpingjackText.setText(Double.toString(pushupNum/35));
+            joggingText.setText(Double.toString(pushupNum*6/175));
         }
 
         //only situp input
         else if (pushupString.matches("")&&!situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")){
             situpNum=Double.parseDouble(situpString);
-            calorieText.setText(Double.toString(situpNum));
+            calorieText.setText(Double.toString(situpNum/2));
+            situpText.setText(Double.toString(situpNum*7/4));
+            jumpingjackText.setText(Double.toString(situpNum/20));
+            joggingText.setText(Double.toString(situpNum*0.06));
         }
         //only jumpingjack input
         else if (pushupString.matches("")&&situpString.matches("")&&!jumpingjackString.matches("")&&joggingString.matches("")){
             jumpingjackMin=Double.parseDouble(jumpingjackString);
-            calorieText.setText(Double.toString(jumpingjackMin));
+            calorieText.setText(Double.toString(jumpingjackMin*10));
+            situpText.setText(Double.toString());
+            jumpingjackText.setText(0);
+            joggingText.setText(0);
 
         }
         //only jogging input
         else if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&!joggingString.matches("")){
             joggingMin=Double.parseDouble(joggingString);
             calorieText.setText(Double.toString(joggingMin));
+            situpText.setText(0);
+            jumpingjackText.setText(0);
+            joggingText.setText(0);
 
         }
         else{
@@ -68,6 +80,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onButtonClick2(View view){
+        EditText pushupText = (EditText)findViewById(R.id.editText);
+        EditText situpText = (EditText)findViewById(R.id.editText2);
+        EditText jumpingjackText = (EditText)findViewById(R.id.editText3);
+        EditText joggingText = (EditText)findViewById(R.id.editText4);
+
+        pushupText.setText(null);
+        situpText.setText(null);
+        jumpingjackText.setText(null);
+        joggingText.setText(null);
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

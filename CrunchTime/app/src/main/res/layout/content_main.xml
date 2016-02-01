@@ -31,7 +31,8 @@
         android:id="@+id/resetButton"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/calorieText"
-        android:layout_toStartOf="@+id/calorieText" />
+        android:layout_toStartOf="@+id/calorieText"
+        android:onClick="onButtonClick2" />
 
     <EditText
         android:layout_width="wrap_content"
