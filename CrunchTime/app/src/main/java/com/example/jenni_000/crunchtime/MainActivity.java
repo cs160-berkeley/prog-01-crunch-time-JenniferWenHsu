@@ -102,11 +102,13 @@ public class MainActivity extends AppCompatActivity {
         EditText situpText = (EditText)findViewById(R.id.editText2);
         EditText jumpingjackText = (EditText)findViewById(R.id.editText3);
         EditText joggingText = (EditText)findViewById(R.id.editText4);
+        EditText calorieText = (EditText)findViewById(R.id.calorieEditText);
 
         pushupText.setText(null);
         situpText.setText(null);
         jumpingjackText.setText(null);
         joggingText.setText(null);
+        calorieText.setText(null);
 
     }
     @Override
