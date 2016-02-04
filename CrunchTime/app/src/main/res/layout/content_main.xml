@@ -11,7 +11,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.jenni_000.crunchtime.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="@drawable/abstractbackground"
+    android:background="@drawable/wood"
     android:id="@+id/ap">
 
     <Button
@@ -63,120 +63,130 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="140dp" />
 
-    <FrameLayout
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/Layout1"
-        android:layout_below="@+id/calorieText"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="10dp">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
 
-        <ImageView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:src="@drawable/situp"
-            android:padding="5dp" />
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:hint="reps"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:gravity="center_horizontal"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="110dp" />
+            android:layout_height="match_parent">
 
-    </FrameLayout>
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout1"
+                android:layout_below="@+id/calorieText"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="10dp">
 
-    <FrameLayout
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/Layout2"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="175dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/situp"
+                    android:padding="5dp" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:textColor="#000000"
+                    android:textColorHint="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="80dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout2"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="175dp">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView2"
-            android:src="@drawable/pushup"
-            android:padding="5dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/pushup"
+                    android:padding="5dp"/>
 
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:hint="reps"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="110dp" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText2"
+                    android:textColor="#000000"
+                    android:textColorHint="#009bd0"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="80dp" />
 
-    </FrameLayout>
+            </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:id="@+id/Layout3"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="10dp">
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout3"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="10dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView3"
-            android:src="@drawable/jumpingjack"
-            android:padding="5dp"/>
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText3"
-            android:hint="mins"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
-            android:gravity="center_horizontal"
-            android:layout_alignBottom="@+id/imageView3"
-            android:layout_marginTop="110dp"
-            android:layout_marginLeft="55dp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/jumpingjack"
+                    android:padding="5dp"/>
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    android:textColor="#000000"
+                    android:textColorHint="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_alignBottom="@+id/imageView3"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="55dp" />
 
-    </FrameLayout>
-    <FrameLayout
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:id="@+id/Layout4"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="175dp">
+            </FrameLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView4"
-                android:src="@drawable/jogging"
-                android:padding="5dp"/>
+            <FrameLayout
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/Layout4"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="175dp">
 
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText4"
-                android:hint="mins"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:gravity="center_horizontal"
-                android:layout_marginLeft="55dp"
-                android:layout_marginTop="110dp" />
-    </FrameLayout>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/jogging"
+                        android:padding="5dp"/>
+
+                    <EditText
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText4"
+                        android:hint="mins"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginTop="110dp" />
+            </FrameLayout>
+
+        </FrameLayout>
+    </ScrollView>
 
 </FrameLayout>

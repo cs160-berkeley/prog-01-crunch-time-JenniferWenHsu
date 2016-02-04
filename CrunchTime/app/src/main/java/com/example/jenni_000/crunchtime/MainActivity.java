@@ -46,18 +46,18 @@ public class MainActivity extends AppCompatActivity {
         if (!pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
                 &&calorieString.matches("")){
             pushupNum=Double.parseDouble(pushupString);
-            calorieText.setText(Double.toString(pushupNum*100/350));
-            situpText.setText(Double.toString(pushupNum*200/350));
-            jumpingjackText.setText(Double.toString(pushupNum*10/350));
-            joggingText.setText(Double.toString(pushupNum*12/350));
+            calorieText.setText(String.format("%.1f",pushupNum * 100 / 350));
+            situpText.setText(String.format("%.1f",pushupNum*200/350));
+            jumpingjackText.setText(String.format("%.1f",pushupNum*10/350));
+            joggingText.setText(String.format("%.1f",pushupNum*12/350));
         }
 
         //only situp input
         else if (pushupString.matches("")&&!situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
                 &&calorieString.matches("")){
             situpNum=Double.parseDouble(situpString);
-            calorieText.setText(Double.toString(situpNum*100/200));
-            pushupText.setText(Double.toString(situpNum*350/200));
+            calorieText.setText(String.format("%.1f",situpNum*100/200));
+            pushupText.setText(String.format("%.1f",situpNum*350/200));
             jumpingjackText.setText(Double.toString(situpNum*10/200));
             joggingText.setText(Double.toString(situpNum*12/200));
         }
