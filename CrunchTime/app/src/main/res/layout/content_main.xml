@@ -23,7 +23,7 @@
         android:layout_alignLeft="@+id/calorieEditText"
         android:layout_alignStart="@+id/calorieEditText"
         android:onClick="onButtonClick1"
-        android:layout_marginLeft="75dp" />
+        android:layout_marginLeft="60dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/calorieEditText"
         android:layout_alignEnd="@+id/calorieEditText"
-        android:layout_marginLeft="200dp" />
+        android:layout_marginLeft="190dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_marginTop="60dp"
         android:layout_below="@+id/calculateButton"
         android:layout_centerHorizontal="true"
-        android:textColor="#2A83A1"
+        android:textColor="#ffffff"
         android:textColorHint="#2A83A1"
         android:textSize="20sp"
         android:hint="YOUR GOAL"
@@ -61,7 +61,9 @@
         android:layout_below="@+id/calorieEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:layout_marginLeft="140dp" />
+        android:layout_marginLeft="140dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
 
     <ScrollView
         android:layout_width="wrap_content"

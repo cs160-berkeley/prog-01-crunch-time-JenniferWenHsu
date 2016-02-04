@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick1(View view){
 
-        EditText pushupText = (EditText)findViewById(R.id.editText);
-        EditText situpText = (EditText)findViewById(R.id.editText2);
-        EditText jumpingjackText = (EditText)findViewById(R.id.editText3);
-        EditText joggingText = (EditText)findViewById(R.id.editText4);
+        EditText pushupText = (EditText)findViewById(R.id.editText2);
+        EditText situpText = (EditText)findViewById(R.id.editText);
+        EditText jumpingjackText = (EditText)findViewById(R.id.editText4);
+        EditText joggingText = (EditText)findViewById(R.id.editText3);
 
         EditText calorieText = (EditText)findViewById(R.id.calorieEditText);
 
