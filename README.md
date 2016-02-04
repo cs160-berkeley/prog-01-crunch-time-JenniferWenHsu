@@ -13,7 +13,7 @@ You must alway enter one field of the app to do the calculations. Attempts on ca
 
 ## Authors
 
-FirstName LastName ([jwhsu@berkeley.edu](mailto:jwhsu@berkeley.edu))
+Jennifer Hsu ([jwhsu@berkeley.edu](mailto:jwhsu@berkeley.edu))
 
 ## Demo Video
 
