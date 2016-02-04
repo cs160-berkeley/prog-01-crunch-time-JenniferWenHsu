@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 &&calorieString.matches("")){
             pushupNum=Double.parseDouble(pushupString);
             calorieText.setText(String.format("%.1f",pushupNum * 100 / 350));
-            situpText.setText(String.format("%.1f",pushupNum*200/350));
-            jumpingjackText.setText(String.format("%.1f",pushupNum*10/350));
-            joggingText.setText(String.format("%.1f",pushupNum*12/350));
+            situpText.setText(String.format("%.1f Reps",pushupNum*200/350));
+            jumpingjackText.setText(String.format("%.1f Mins",pushupNum*10/350));
+            joggingText.setText(String.format("%.1f Mins",pushupNum*12/350));
         }
 
         //only situp input
@@ -57,38 +57,38 @@ public class MainActivity extends AppCompatActivity {
                 &&calorieString.matches("")){
             situpNum=Double.parseDouble(situpString);
             calorieText.setText(String.format("%.1f",situpNum*100/200));
-            pushupText.setText(String.format("%.1f",situpNum*350/200));
-            jumpingjackText.setText(Double.toString(situpNum*10/200));
-            joggingText.setText(Double.toString(situpNum*12/200));
+            pushupText.setText(String.format("%.1f Reps",situpNum*350/200));
+            jumpingjackText.setText(String.format("%.1f Mins", situpNum*10/200));
+            joggingText.setText(String.format("%.1f Mins", situpNum*12/200));
         }
         //only jumpingjack input
         else if (pushupString.matches("")&&situpString.matches("")&&!jumpingjackString.matches("")&&joggingString.matches("")
                 &&calorieString.matches("")){
             jumpingjackMin=Double.parseDouble(jumpingjackString);
-            calorieText.setText(Double.toString(jumpingjackMin*10));
-            pushupText.setText(Double.toString(jumpingjackMin*35));
-            situpText.setText(Double.toString(jumpingjackMin*20));
-            joggingText.setText(Double.toString(jumpingjackMin*1.2));
+            calorieText.setText(String.format("%.1f",jumpingjackMin*10));
+            pushupText.setText(String.format("%.1f Reps",jumpingjackMin*35));
+            situpText.setText(String.format("%.1f Reps",jumpingjackMin*20));
+            joggingText.setText(String.format("%.1f Mins", jumpingjackMin * 1.2));
 
         }
         //only jogging input
         else if (pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&!joggingString.matches("")
                 &&calorieString.matches("")){
             joggingMin=Double.parseDouble(joggingString);
-            calorieText.setText(Double.toString(joggingMin*100/12));
-            pushupText.setText(Double.toString(joggingMin*350/12));
-            situpText.setText(Double.toString(joggingMin*200/12));
-            jumpingjackText.setText(Double.toString(joggingMin*10/12));
+            calorieText.setText(String.format("%.1f",joggingMin*100/12));
+            pushupText.setText(String.format("%.1f Reps",joggingMin*350/12));
+            situpText.setText(String.format("%.1f Reps",joggingMin*200/12));
+            jumpingjackText.setText(String.format("%.1f Mins",joggingMin*10/12));
 
         }
         //only the calorie input
         else if(pushupString.matches("")&&situpString.matches("")&&jumpingjackString.matches("")&&joggingString.matches("")
                 &&!calorieString.matches("")){
             totalCalorie = Double.parseDouble(calorieString);
-            pushupText.setText(Double.toString(totalCalorie*3.5));
-            situpText.setText(Double.toString(totalCalorie*2));
-            jumpingjackText.setText(Double.toString(totalCalorie/10));
-            joggingText.setText(Double.toString(totalCalorie*0.12));
+            pushupText.setText(String.format("%.1f Reps",totalCalorie*3.5));
+            situpText.setText(String.format("%.1f Reps",totalCalorie*2));
+            jumpingjackText.setText(String.format("%.1f Mins",totalCalorie / 10));
+            joggingText.setText(String.format("%.1f Mins",totalCalorie * 0.12));
         }
 
         else{
@@ -118,14 +118,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
