@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CalorieCAL</string>
+    <string name="action_settings">Settings</string>
+    <string name="goal">YOUR GOAL</string>
+</resources>

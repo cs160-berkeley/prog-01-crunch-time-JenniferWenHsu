@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jenni_000.crunchtime.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/wood"
+    android:id="@+id/ap">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/calculateButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/calorieEditText"
+        android:layout_alignStart="@+id/calorieEditText"
+        android:onClick="onButtonClick1"
+        android:layout_marginLeft="60dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButton"
+        android:onClick="onButtonClick2"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/calorieEditText"
+        android:layout_alignEnd="@+id/calorieEditText"
+        android:layout_marginLeft="190dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/calorieEditText"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textColorHint="#2A83A1"
+        android:hint="@string/goal"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="65dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Calories"
+        android:id="@+id/calorieText"
+        android:layout_below="@+id/calorieEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="140dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout1"
+                android:layout_below="@+id/calorieText"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/situp"
+                    android:padding="5dp" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:hint="Reps" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout2"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="175dp">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/pushup"
+                    android:padding="5dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText2"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:hint="Reps" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/Layout3"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/jumpingjack"
+                    android:padding="5dp"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText3"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_alignBottom="@+id/imageView3"
+                    android:layout_marginTop="100dp"
+                    android:hint="mins" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/Layout4"
+                android:layout_marginTop="320dp"
+                android:layout_marginLeft="175dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/jogging"
+                        android:padding="5dp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editText4"
+                        android:hint="mins"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="100dp" />
+            </FrameLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</FrameLayout>
