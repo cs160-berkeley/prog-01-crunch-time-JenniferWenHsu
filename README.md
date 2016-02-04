@@ -1,4 +1,4 @@
-# PROG 01: Crunch Time - 
+# PROG 01: Crunch Time -
 
 The app "CalorieCal" calculates the amount of work you need to do in order to burn the desired calories you entered. The included types of exercise are situp, jumpingjack, pushup, and jogging. The app also allows you to do conversions between the four types of exercise. 
 
@@ -22,6 +22,7 @@ See [CS160 CrunchTime Project - CalorieCAL ] (https://www.youtube.com/watch?v=sP
 ## Screenshots
 
 <img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/calculation.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 
