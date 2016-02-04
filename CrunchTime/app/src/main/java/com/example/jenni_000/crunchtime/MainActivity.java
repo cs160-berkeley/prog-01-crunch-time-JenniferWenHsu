@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else{
-            Toast.makeText(this, "Only fill in one field", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Only fill in one field. Click on the RESET button to continue.", Toast.LENGTH_SHORT).show();
             return;
         }
     }
